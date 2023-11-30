@@ -16,18 +16,18 @@ import java.util.logging.Logger;
  * The repository for sales value records. Database access occurs via JDBC.
  */
 public class SalesValueRepository {
-	// TODO Complete JDBC-SQL statement
-	private static final String FIND_ALL_QUERY = "SELECT ...";
-	// TODO Complete JDBC-SQL statement
-	private static final String FIND_BY_ID_QUERY = "SELECT * FROM SalesValue ...";
-	// TODO Complete JDBC-SQL statement
-	private static final String FIND_BY_PRODUCTID_QUERY = "SELECT * FROM SalesValue ...";
-	// TODO Complete JDBC-SQL statement
-	private static final String INSERT_QUERY = "INSERT INTO SalesValue ...";
-	// TODO Complete JDBC-SQL statement
-	private static final String UPDATE_QUERY = "UPDATE SalesValue SET ...";
-	// TODO Complete JDBC-SQL statement
-	private static final String DELETE_QUERY = "DELETE FROM SalesValue ...";
+
+	private static final String FIND_ALL_QUERY = "SELECT * FROM SalesValue";
+
+	private static final String FIND_BY_ID_QUERY = "SELECT * FROM SalesValue WHERE id = ?";
+
+	private static final String FIND_BY_PRODUCTID_QUERY = "SELECT * FROM SalesValue WHERE productId = ?";
+
+	private static final String INSERT_QUERY = "INSERT INTO SalesValue (productId, number, percentage) values(?,?,?)";
+
+	private static final String UPDATE_QUERY = "UPDATE SalesValue SET productId = ?, number = ?, percentage = ? WHERE id = ?";
+
+	private static final String DELETE_QUERY = "DELETE FROM SalesValue WHERE id = ?";
 
 	private static final Logger LOGGER = Logger.getLogger(SalesValueRepository.class.getName());
 

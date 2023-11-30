@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import ch.bfh.piechart.datalayer.SalesValueLoader;
+
 /**
  * Starting point of the Java FX application.
  */
@@ -40,7 +42,7 @@ public class App extends Application {
 	 */
 	public static void main(String[] args) {
 		// TODO Uncomment the following line when having completed class SalesValueRepository
-		// SalesValueLoader.loadSalesValues();
+		SalesValueLoader.loadSalesValues();
 		launch();
 	}
 
